@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    background: tan;
+    height: 100vh;
+
+}
+
+.mem__list {
+
+    list-style: none;
+}
+
+
+
+.mem_item {
+    border: 1px solid red;
+}
+
+.mem-title {
+    padding: 1rem 1rem;
+    display: block;
+    cursor: pointer;
+}
+
+.mem-input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    position: absolute;
+}
+
+.mem-img {
+    display: none;
+}
