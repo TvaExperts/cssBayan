@@ -15,26 +15,42 @@
 
 .mem-list {
     list-style: none;
-}
-
-.mem-list:hover + .mem-title{
-    background: red;
+    transition: all .3s ease-in-out;
 }
 
 .mem-item {
     padding: 1rem 1rem;
     border: 1px solid red;
+    background: rgb(237, 215, 215);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
 }
 
 .mem-title {
-    background: yellow;
-    display: block;
-    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    transition: all .3s ease-in-out;
 }
 
+.mem-label {
+    cursor: pointer;  
+    margin: 0 auto;  
+}
+
+.mem-plus {
+    display: block;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+
+}
 
 .mem-img {
-    display: none;
+    height: 0;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    display: block;
+    
 }
 
 .mem-input {
@@ -44,7 +60,31 @@
     position: absolute;
 }
 
-.mem-input:checked + .mem-img {
-    display: block;
+.mem-input:checked + .mem-label .mem-img {
+    /*display: block;*/
+    transition: all .3s ease-in-out;
+    height: 100%;
+    opacity: 1;
+}
+
+.mem-input:checked .mem-plus {
+    transform: rotate(45deg);
+}
+
+.mem-label:hover .mem-title .mem-plus {
+    transform: rotate(45deg);
+}
+
+.mem-list:hover .mem-title .mem-plus {
+    
+    transition: all .3s ease-in-out;
+    opacity: 1;
+}
+
+.mem-item:hover .mem-label .mem-img {
+    /*display: block;*/
+    height: 100%;
+    opacity: 1;
+    transition: all .3s ease-in-out;
 }
 
