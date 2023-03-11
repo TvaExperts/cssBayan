@@ -13,21 +13,28 @@
 
 }
 
-.mem__list {
-
+.mem-list {
     list-style: none;
 }
 
+.mem-list:hover + .mem-title{
+    background: red;
+}
 
-
-.mem_item {
+.mem-item {
+    padding: 1rem 1rem;
     border: 1px solid red;
 }
 
 .mem-title {
-    padding: 1rem 1rem;
+    background: yellow;
     display: block;
     cursor: pointer;
+}
+
+
+.mem-img {
+    display: none;
 }
 
 .mem-input {
@@ -37,6 +44,7 @@
     position: absolute;
 }
 
-.mem-img {
-    display: none;
+.mem-input:checked + .mem-img {
+    display: block;
 }
+
