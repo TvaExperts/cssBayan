@@ -4,53 +4,47 @@
     box-sizing: border-box;
 }
 
-
-.wrapper {
-    max-width: 1920px;
-    margin: 0 auto;
-    background: tan;
-    height: 100vh;
-
+body {
+    background: rgb(202, 193, 193);
 }
+
 
 .mem-list {
     list-style: none;
-    transition: all .3s ease-in-out;
+    width: 70vw;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+    background: rgb(237, 215, 215);
 }
 
 .mem-item {
-    padding: 1rem 1rem;
-    border: 1px solid red;
-    background: rgb(237, 215, 215);
+    padding: 1rem 0;
     cursor: pointer;
-    transition: all .3s ease-in-out;
-
+    border-bottom: .1rem solid rgb(106, 106, 106);
 }
 
 .mem-title {
     display: flex;
     justify-content: space-between;
-    transition: all .3s ease-in-out;
 }
 
 .mem-label {
     cursor: pointer;  
-    margin: 0 auto;  
+    text-align: center;
 }
 
 .mem-plus {
     display: block;
-    transition: all .3s ease-in-out;
     opacity: 0;
-
+    transition: all .3s ease-in-out;
 }
 
 .mem-img {
-    height: 0;
+    max-height: 0;
     opacity: 0;
+    overflow: hidden;
+    margin: 0 auto;
     transition: all .3s ease-in-out;
-    display: block;
-    
 }
 
 .mem-input {
@@ -61,9 +55,7 @@
 }
 
 .mem-input:checked + .mem-label .mem-img {
-    /*display: block;*/
-    transition: all .3s ease-in-out;
-    height: 100%;
+    max-height: 30rem;
     opacity: 1;
 }
 
@@ -76,15 +68,16 @@
 }
 
 .mem-list:hover .mem-title .mem-plus {
-    
-    transition: all .3s ease-in-out;
     opacity: 1;
 }
 
 .mem-item:hover .mem-label .mem-img {
-    /*display: block;*/
-    height: 100%;
+    max-height:  30rem;
     opacity: 1;
-    transition: all .3s ease-in-out;
+}
+
+.mem-imgg {
+    max-height: 100%;
+    max-width: 100%;
 }
 
