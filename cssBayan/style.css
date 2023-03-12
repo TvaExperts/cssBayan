@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(202, 193, 193);
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    padding: 3rem;
+    font-size: 3rem;
+}
+
+.wrapper {
+    max-width: 50rem;
+    margin: 0 auto;
+    background: rgb(237, 215, 215);
+}
+
+.meme-list {
+    width: 100%;
+    padding: 0 3rem 1rem;
+    list-style: none;
+}
+
+.meme-item {
+    padding: 1rem 0;
+    cursor: pointer;
+    border-bottom: .1rem solid rgb(106, 106, 106);
+}
+
+.meme-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.meme-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.meme-label {
+    cursor: pointer;  
+    transition: all .2s ease-in-out;
+}
+
+.meme-caption {
+    color: blue;
+}
+
+.meme-plus {
+    display: block;
+    /*opacity: 1;*/
+    transition: all .2s ease-in-out;
+}
+
+.meme-img {
+    max-height: 0;
+    max-width: 0;
+    margin: 0 auto;
+    display: block;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.meme-input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    position: absolute;
+}
+
+.meme-input:checked +.meme-label .meme-img {
+    max-height: 25rem;
+    max-width: 100%;
+    padding-top: 1vw;
+    opacity: 1;
+}
+
+.meme-input:checked +.meme-label .meme-plus {
+    transform: rotate(45deg);
+}
+
+.meme-input:checked +.meme-label .meme-title .meme-caption {
+    color: black;
+}
+
+  /* when hover is supported */
+
+@media (hover: hover) {
+
+    .meme-plus {
+        opacity: 0;
+    }
+
+    .meme-list:hover .meme-title .meme-plus {
+        opacity: 1;
+    }
+
+    .meme-label:hover .meme-title .meme-plus {
+        transform: rotate(45deg);
+    }
+
+    .meme-list:hover .meme-title .meme-caption {
+        color: black;
+    }
+
+    .meme-item:hover .meme-label .meme-img {
+        max-height: 25rem;
+        max-width: 100%;
+        padding-top: 1vw;
+        opacity: 1;
+    }
+}
+
+.meme-label:active {
+    opacity: 0.6;
+}
+
+.meme-label:active .meme-title .meme-caption {
+    color: blue;
+}
+
+@media (max-width: 1200px) { 
+    body {
+        font-size: 1.2rem;
+        background: rgb(151, 234, 137);
+    }
+
+    .wrapper {
+        max-width: 85%; 
+    }
+
+    h1 {
+        padding: 1rem 1.4rem 0;
+        font-size: 2.4rem;
+    }
+
+    .meme-list {
+        padding: 1rem 1.4rem;
+    }
+
+    .meme-item {
+        padding: .5rem 0;
+    }
+}
+
+@media (max-width: 380px) { 
+    body {
+        font-size: .8rem;
+        background: rgb(137, 223, 247);
+    }
+
+    h1 {
+        padding: 1rem 1rem 0;
+        font-size: 1.6rem;
+    }
+
+    .meme-list {
+        padding: 1rem;
+    }
+
+    .meme-item {
+        padding: .2rem 0;
+    }
+}
